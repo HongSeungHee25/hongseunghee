@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>주문 확인</title>
+</head>
+<body>
+<!-- 회원 : 주문 확인 -->
+<h3>주문 확인</h3>
+<hr>
+<ul>
+    <li>주문 번호 : <span th:text="${vo.bidx}"></span></li>
+    <li>회원 이메일 : <span th:text="${vo.email}"></span></li>
+    <li>상품 코드 : <span th:text="${vo.pcode}"></span></li>
+    <li>구매 수량 : <span th:text="${vo.quantity}"></span></li>
+    <li>구매 날짜 : <span th:text="${vo.orderdate}"></span></li>
+</ul>
+<hr>
+<a th:href="@{/order/orderForm}">추가 주문</a>
+<a th:href="@{/order/update(bidx=${vo.bidx})}">주문 수정</a>
+<a th:href="@{../}">HOME</a>
+
+</body>
+</html>

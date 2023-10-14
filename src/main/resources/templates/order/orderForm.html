@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>주문하기</title>
+</head>
+<body>
+<!-- 회원 : 주문 입력-->
+<h3>주문하기</h3>
+<form action="orderForm" method="post">
+    <label for="useremail">이메일 : </label>
+    <input type="text" id="useremail" name="email" placeholder="이메일을 입력해주세요.">
+    <label for="userpcode">상품 코드 : </label>
+    <input type="text" id="userpcode" name="pcode" placeholder="상품코드를 입력해주세요.">
+    <label for="userQnt">구매 수량 : </label>
+    <input type="number" id="userQnt" name="quantity" placeholder="수량을 입력해주세요.">
+    <label for="userdate">구매 날짜 : </label>
+    <input type="date" id="userdate" name="orderdate">
+    <button>주문</button>
+</form>
+<hr>
+<a th:href="@{../}">HOME</a>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>주문 회원 이메일</title>
+</head>
+<body>
+<!-- 관리자 : 주문 회원 이메일 -->
+<h3>고객 주문 현황</h3>
+<hr>
+<ul th:each="email : ${list}">
+    <li><a th:href="@{/order/orderDetail(email=${email})}"><span th:text="${email}"></span></a></li>
+</ul>
+<hr>
+<a th:href="@{/order/orderForm}">추가 주문</a>
+<a th:href="@{../}">HOME</a>
+</body>
+</html>
